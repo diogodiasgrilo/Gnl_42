@@ -29,14 +29,16 @@ char	*ft_strjoin(char *s1, char *s2)
 	char	*new_str;
 	int		i;
 
-	i = -1;
+	i = 0;
 	new_str = (char *)malloc((sizeof(char) * \
 	(ft_strlen(s1) + ft_strlen(s2)) + 1));
 	if (!new_str)
 		return (0);
-	while (s1 && s1[++i])
+	while (s1 && s1[i])
+	{
 		new_str[i] = s1[i];
-	i += (!s1);
+		i++;
+	}
 	free(s1);
 	while (*s2)
 	{
