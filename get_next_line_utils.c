@@ -52,14 +52,14 @@ char	*ft_strjoin(char *s1, char *s2)
 
 void	ft_fixer_mover(char *buffer, int gate, int i)
 {
-	int	j;
+	int	k;
 
-	j = 0;
+	k = 0;
 	if (gate)
 	{
 		while (buffer[i])
 		{
-			buffer[j++] = buffer[i];
+			buffer[k++] = buffer[i];
 			buffer[i++] = 0;
 		}
 	}
@@ -69,10 +69,8 @@ int	ft_tidy(char *buffer)
 {
 	int	gate;
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
 	gate = 0;
 	while (buffer[i])
 	{
