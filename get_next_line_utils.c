@@ -6,7 +6,7 @@
 /*   By: diogpere <diogpere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:57:09 by ddias             #+#    #+#             */
-/*   Updated: 2023/03/06 16:19:31 by diogpere         ###   ########.fr       */
+/*   Updated: 2023/04/16 17:32:51 by diogpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_strjoin(char *s1, char *s2)
 		new_str[i] = s1[i];
 		i++;
 	}
-	free(s1);
+	if (s1)
+		free(s1);
 	while (*s2)
 	{
 		new_str[i++] = *s2;
