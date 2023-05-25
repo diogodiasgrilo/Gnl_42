@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	int			i;
 
 	line = NULL;
-	if (read(fd, 0, 0) < 0 || fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
 		i = 0;
 		if (fd >= 0 && fd <= FOPEN_MAX)
